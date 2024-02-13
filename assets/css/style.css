@@ -1,0 +1,145 @@
+:root {
+  --background-color: #1a1a1a;
+  --reguler: 400;
+  --semibold: 600;
+  --bold: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background-color);
+  color: #fff;
+  font-family: 'Source Sans 3', sans-serif;
+  background-image: url(../images/background.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+section.header {
+  max-width: 1148px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.header .header-text {
+  max-width: 582px;
+}
+
+.header-text .big-header {
+  font-weight: var(--bold);
+  font-size: 84px;
+  background-image: linear-gradient(to right, rgba(88, 47, 251, 1), rgba(255, 77, 205, 1), rgba(252, 151, 78, 1));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  width: fit-content;
+  margin-bottom: 10px;
+}
+
+.header-text .small-header {
+  font-weight: var(--reguler);
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 34px;
+}
+
+.arrows {
+  display: flex;
+  gap: 15px;
+}
+
+.arrows button {
+  padding: 23px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+}
+
+.arrows button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: 0.2s;
+}
+
+.arrows button:active {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+/* =============================card============================= */
+
+.testimonial-cards {
+  margin-left: 73px;
+  margin-right: 73px;
+  margin-bottom: 70px;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 30px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.testimonial-cards .card {
+  width: 360px;
+  text-align: center;
+  padding: 40px 30px;
+  box-sizing: border-box;
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 6px;
+}
+
+.card .text-card {
+  line-height: 34px;
+  font-weight: var(--reguler);
+  font-size: 16px;
+}
+
+.card .profile-card {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.profile-card img {
+  width: 50px;
+  align-self: center;
+}
+
+/* =============================Responsive============================= */
+
+@media screen and (max-width: 1200px) {
+  section.header {
+    max-width: 920px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  section.header {
+    flex-direction: column;
+    width: auto;
+  }
+
+  .header .header-text {
+    /* width: 582px; */
+    text-align: center;
+  }
+
+  .header-text .big-header {
+    width: auto;
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  .header-text .big-header {
+    font-size: 64px;
+  }
+}
